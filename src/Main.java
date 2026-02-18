@@ -1,15 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Arrays;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+
+    public static void main(String[] args) {
+
+        // -------- INTEGER EXAMPLE --------
+        Integer[] firstNumbers = {1, 2, 3};
+        Integer[] secondNumbers = {4, 5, 6};
+
+        Integer[] mergedNumbers =
+                GenericArrayUtility.mergeArrays(firstNumbers, secondNumbers);
+
+        System.out.println("Merged Integer Array: "
+                + Arrays.toString(mergedNumbers));
+
+
+        // -------- STRING EXAMPLE --------
+        String[] firstFruits = {"apple", "banana"};
+        String[] secondFruits = {"cherry", "date"};
+
+        String[] mergedFruits =
+                GenericArrayUtility.mergeArrays(firstFruits, secondFruits);
+
+        System.out.println("Merged String Array: "
+                + Arrays.toString(mergedFruits));
     }
 }
